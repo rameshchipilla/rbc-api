@@ -1,0 +1,21 @@
+spring:
+  hsql:
+    datasource:
+      url: 'jdbc:hsqldb:hsql://rbc-db/test'
+      driverClassName: org.hsqldb.jdbc.JDBCDriver
+      username: sa
+      password: null
+    jpa:
+      database-platform: org.hibernate.dialect.HSQLDialect
+      show-sql: true    
+#okta:
+#  oauth2:
+#    issuer: 'https://dev-906083.okta.com/oauth2/default'
+#    clientId: 0oa1iuuykyvV5kSiD357
+#    clientSecret: EZ88jmaWDy4iKlDI5xuPHKVnf-hDlA47ze6dBZUW
+#    scopes: openid
+#logging:
+  #file: /var/log/rbc-api.log
+  #level:
+    #org.springframework.web: DEBUG
+    #org.hibernate: DEBUG
