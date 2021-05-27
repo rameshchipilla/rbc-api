@@ -13,6 +13,7 @@ public class APIApp {
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(APIApp.class);
 //		app.setDefaultProperties(Collections.singletonMap("server.port", "9092"));
+		System.out.println("Testing auto deploy");
 		app.run(args);
 	}
 
