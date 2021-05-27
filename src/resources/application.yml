@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   hsql:
     datasource:
@@ -7,15 +10,40 @@ spring:
       password: null
     jpa:
       database-platform: org.hibernate.dialect.HSQLDialect
-      show-sql: true    
-#okta:
-#  oauth2:
-#    issuer: 'https://dev-906083.okta.com/oauth2/default'
-#    clientId: 0oa1iuuykyvV5kSiD357
-#    clientSecret: EZ88jmaWDy4iKlDI5xuPHKVnf-hDlA47ze6dBZUW
-#    scopes: openid
-#logging:
-  #file: /var/log/rbc-api.log
-  #level:
-    #org.springframework.web: DEBUG
-    #org.hibernate: DEBUG
+      show-sql: true
+  h2:
+    console: 
+      enabled: true
+      path: /h2
+  #jackson:
+    #date-format: yyyy-MM-dd
+    #serialization.write-dates-as-timestamps: false
+    #time-zone: PDT
+
+okta:
+  oauth2:
+    issuer: 'https://dev-906083.okta.com/oauth2/default'
+    clientId: 0oa1iuuykyvV5kSiD357
+    clientSecret: EZ88jmaWDy4iKlDI5xuPHKVnf-hDlA47ze6dBZUW
+    scopes: openid
+
+logging:
+  file: /var/log/rbc-api.log
+  level:
+    org.springframework.web: ERROR
+    org.hibernate: ERROR
+
+
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=
+
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+#okta.oauth2.issuer=https://dev-906083.okta.com/oauth2/default
+#okta.oauth2.clientId=0oa1iuuykyvV5kSiD357
+#okta.oauth2.clientSecret=EZ88jmaWDy4iKlDI5xuPHKVnf-hDlA47ze6dBZUW
+#okta.oauth2.scopes=openid
+
+#security.oauth2.resource.userInfoUri: https://dev-906083.okta.com/oauth2/default/v1/userinfo    
